@@ -1,0 +1,108 @@
+@import "../../private/shared/common/common.wxss";
+.page {
+	background: #262260 center center /cover url("https://www.korjo.cn/xcx/tyx_playImg/bg_hema1.jpg") fixed no-repeat;
+}
+
+.page.bg02 {
+	background-image: url("https://www.korjo.cn/xcx/tyx_playImg/bg_hema2.jpg");
+}
+
+swiper {
+	height: 100%;
+}
+
+swiper-item .title {
+	width: 58%;
+	margin: 50rpx auto 30rpx;
+}
+
+swiper-item .pic-wrapper {
+    position: relative;
+	width: 71%;
+	margin: 20rpx auto 0;
+}
+
+swiper-item .pic-wrapper .pic {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+}
+
+swiper-item .pic-wrapper .pic-bg {
+	z-index: 1;
+	position: absolute;
+	top: 1%;
+	bottom: 1%;
+	left: 1%;
+	right: 1%;
+	background-color: rgba(6,5,37, .8);
+}
+
+swiper-item .pic-wrapper .magnify {
+	position: absolute;
+	z-index: 3;
+	bottom: 35rpx;
+	right: -19%;
+	width: 38%;
+}
+
+swiper-item .arrow {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 70rpx;
+	height: 70rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(6,5,37, .8);
+	border-radius: 50%;
+}
+
+swiper-item .arrow.left {
+	left: 30rpx;
+}
+
+swiper-item .arrow.right {
+	right: 30rpx;
+}
+
+swiper-item .arrow .icon {
+	width: 35rpx;
+	height: 35rpx;
+}
+
+swiper-item .arrow.right .icon	{
+	transform: rotate(180deg);
+}
+
+.btn-wrapper {
+	position: relative;
+	margin: 15rpx auto;
+	width: 71%;
+}
+
+.btn-wrapper button {
+	border: none;
+	padding: 0;
+}
+
+.btn-wrapper .btn {
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+.btn-wrapper .btn-bg {
+	z-index: 1;
+	position: absolute;
+	top: 6rpx;
+	bottom: 6rpx;
+	left: 1%;
+	right: 1%;
+	background-color: rgba(15,7,56, .8);
+}
+
+.page.bg02 swiper-item .pic-wrapper .pic-bg {
+	background-color: rgba(15,7,56, .8);
+}

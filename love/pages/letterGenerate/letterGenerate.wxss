@@ -1,0 +1,128 @@
+@import "../../../private/shared/common/common.wxss";
+
+page{
+    width: 100%;
+    height: 100%;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    background: center center url('https://www.korjo.cn/xcx/thisLoveLetter/loveLetterBg.jpg')  no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.letterFrame{
+    width: 76%;
+    height: 74%;
+    padding: 80rpx 0rpx 100rpx 0;
+    background: url('https://www.korjo.cn/xcx/thisLoveLetter/letterPage.png');
+    background-size: 100% 100%;
+    margin-top: 40rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.letterLogo{
+    width: 90%;
+}
+.letterLogo image{
+    width: 100%;
+}
+.letterInfo{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.letterReceive{
+    display: flex;
+    align-items: center;
+}
+.letterReceive image{
+    width: 50rpx;
+}
+.letterReceive input{
+    width: 150rpx;
+    height: 50rpx;
+    border-bottom: 2rpx solid #e85c83;
+    margin-left: 10rpx;
+    color: #a40550;
+}
+.letterInput{
+    width: 100%;
+    height: 100rpx;
+    margin: 40rpx 0;
+    flex-grow: 1;
+}
+.letterInput_text{
+    width: 100%;
+    height: 52rpx;
+    /*padding: 20rpx 10rpx;*/
+    font-size: 36rpx;
+    line-height: 36rpx;
+    color: #a40550;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid #e85c83;
+}
+.letterInput textarea{
+    width: 100%;
+    height: 100%;
+    border: 2rpx solid #e85c83;
+    padding: 20rpx 10rpx;
+    font-size: 20rpx;
+    color: #a40550;
+    box-sizing: border-box;
+    text-decoration: underline;
+    line-height: 40rpx;
+}
+.letterSend{
+    display: flex;
+    justify-content: flex-end;
+}
+.letterSend input{
+    width: 150rpx;
+    height: 50rpx;
+    border-bottom: 2rpx solid #e85c83;
+    text-align: right;
+    color: #a40550;
+}
+.input_text_receive{
+    color:#e85c83;
+    font-size: 26rpx;
+    padding-left: 10rpx;
+}
+.input_text_input{
+    color: #f7c0cc;
+    font-size: 20rpx;
+    padding: 0rpx 0;
+}
+.input_text_send{
+    color: #f7c0cc;
+    font-size: 26rpx;
+    /*text-align: right;*/
+    padding-right: 10rpx;
+    /*transform: translateX(-30rpx);*/
+}
+.tips{
+    width: 100%;
+    font-size: 30rpx;
+    color: #fff;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.more{
+    width: 100%;
+    background-color: rgba(233,40,89,.4);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
+}

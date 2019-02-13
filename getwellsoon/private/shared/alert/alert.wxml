@@ -1,0 +1,13 @@
+<template name="alert">
+	<view class="lightbox" hidden="{{!show}}">
+        <view class="alertbox {{role}}">
+        	<image class="pic" src="../../images/alarm.svg"></image>
+        	<view class="h2">{{title}}</view>
+            <view class="p"><text>{{hint}}</text></view>
+            <view class="btns">
+                <view class="btn" wx:if="{{hasCancel}}" bindtap="cancel">取消</view>
+                <button class='btn important' plain="true" data-modal="{{hasCancel}}" bindtap="conform">确定</button>
+            </view>
+        </view>
+    </view>
+</template>

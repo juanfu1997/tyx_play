@@ -1,0 +1,45 @@
+<import src='../../../private/shared/bar/bar.wxml' />
+<import src='../../../private/shared/alert/alert.wxml' />
+<view class="page {{bg}}">
+    <template is="bar" data="{{...bar}}"/>
+    <view class="container" style="margin-top: {{bar.titleHeight}}px;">
+        <image class="title" src="{{img}}calorie_title.png" mode="widthFix"></image>
+        <view class="subtitle-wrapper">
+        	<div class="circle"></div>
+        	<text>首先了解一下你的身体指数</text>
+        	<div class="circle"></div>
+        </view>
+        <image class="intro {{introAnimation}}" src="{{img}}bmi_intro.png" mode="widthFix"></image>
+        <view class="result {{show}}">
+        	<image wx:if="{{result.status}}" class="intro" src="../../images/bmi_result.png" mode="widthFix"></image>
+        	<view class="data" wx:if="{{result.status}}">
+        		<view class="li">你的身体指数：{{result.num}}</view>
+        		<view class="li">你的身体状态：{{result.status}}</view>
+        	</view>
+        </view>
+        <form bindsubmit="formSubmit">
+        	<image class="form-bg" src="{{img}}bmi_form.png" mode="widthFix"></image>
+        	<view class="li">
+	            <view class="subtitle">你的身高：</view>
+	            <view class="input-wrapper">
+	                <input type="digit" name="height" maxlength="5"/>
+	                <image src="{{img}}i-input.png" mode="widthFix"></image>
+	            </view>
+	            <view class="subtitle">厘米（cm）</view>
+	        </view>
+	        <view class="li">
+	            <view class="subtitle">你的体重：</view>
+	            <view class="input-wrapper">
+	                <input type="digit" name="weight" maxlength="5"/>
+	                <image src="{{img}}i-input.png" mode="widthFix"></image>
+	            </view>
+	            <view class="subtitle">千克（kg）</view>
+	        </view>
+        	<button form-type="submit" plain="true">
+        		<image src="{{img}}bmi-submit.png" mode="widthFix"></image>
+        	</button>
+        </form>
+        <image bindtap="goCalculation" class="calorie-btn" src="{{img}}btn_calorie.png" mode="widthFix"></image>
+    </view>
+</view>
+<template is="alert" data="{{...alert}}"/>

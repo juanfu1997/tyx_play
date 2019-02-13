@@ -1,0 +1,101 @@
+<import src='../../private/shared/bar/bar.wxml' />
+<!--pages/show/show.wxml-->
+<view class='outContainer' style="height: {{windowHeight}}rpx">
+    <template is="bar" data="{{...bar}}"/>
+    <view class='container' style='width:{{windowHeight}}rpx;height:{{windowWidth}}rpx;transform: rotate(-90deg) translate(-{{windowHeight*rate}}px);margin-top: {{bar.titleHeight}}px;'>
+        <!--左侧编辑栏-->
+        <view class='operate'>
+            <!--编辑明信片按钮  -->
+            <view class='op op1' bindtap='bindEditBtn'>
+                <image hidden='{{isShare}}' src='{{img}}edit_icon1.png' mode='widthFix' style='width:80rpx;'></image>
+                <text style='display:{{isShare?"none":"inline-block"}};'>编辑明信片</text>
+            </view>
+            <!--点击查看正反面按钮  -->
+            <view class='op op2' bindtap='bindTurnBtn'>
+                <image class='{{hiddenGC?"rotate0":"rotate180"}}' src='{{img}}tri_icon1.png' mode='widthFix' style='width:50rpx;'></image>
+                <text>{{triBtnText}}</text>
+            </view>
+            <!--分享按钮  -->
+            <view class='op op3' bindtap='bindShareBtn'>
+                <image hidden='{{isShare}}' src='{{img}}mail_icon1.png' mode='widthFix' style='width:80rpx;'></image>
+                <text style='display:{{isShare?"none":"inline-block"}};'>分享明信片</text>
+            </view>
+        </view>
+        <!--明信片正反面  -->
+        <view class='content'>
+            <!--反面 不要在意class名称。。。  -->
+            <view class='gc foregroundContent {{hiddenGC?"slideOutLeft":"slideInRight"}}' hidden='{{hiddenGC}}' style='width:{{windowHeight*0.84-100}}rpx;height:605rpx;padding:46rpx;'>
+                <!--左部  -->
+                <view class='left'>
+                    <!--邮编  -->
+                    <view class='postcodeBox' style='position:relative'>
+                        <view class='postcode'>
+                            <text>0</text>
+                        </view>
+                        <view class='postcode'>
+                            <text>0</text>
+                        </view>
+                        <view class='postcode'>
+                            <text>0</text>
+                        </view>
+                        <view class='postcode'>
+                            <text>0</text>
+                        </view>
+                        <view class='postcode'>
+                            <text>0</text>
+                        </view>
+                        <image id='postcard_logo_0' src='http://www.korjo.cn/xcx/poststamp/postcard_logo.png' mode='widthFix'></image>
+                    </view>
+                    <!--圆形图片  -->
+                    <view class='imageBox' style='position:relative;'>
+                        <view class='fadeIn' style="width: 400rpx; height: 400rpx;">
+                            <image src='{{picFrameUrl}}' style='width: 400rpx; height: 400rpx;'></image>
+                            <view style="width: 300rpx; height: 300rpx;border-radius:50%;overflow:hidden;position:absolute;top:50rpx;left:50rpx;">
+                                <image src='{{picUrl}}' style='width:450rpx;height:300rpx;margin-left:-20rpx;'></image>
+                            </view>
+                            <text wx:if="{{currentConfig.config=='config_korjo'}}" style='font-size:30rpx;display:inline-block;width:100%;height:40rpx;line-height:40rpx;text-align:center;'>{{address}}</text>
+                        </view>
+                    </view>
+                </view>
+                <!--中间的分隔条  -->
+                <view class='center'>
+                    <image src='{{img}}line1.png'></image>
+                </view>
+                <!--右部  -->
+                <view class='right' style='position:relative'>
+                    <!--邮票  -->
+                    <view class='stampBox' style='position:relative;'>
+                        <image class='fadeIn' src='{{stampUrl}}' style='height:180rpx;width:180rpx;'></image>
+                        <view style='height:180rpx;width:180rpx;position:absolute;top:0;right:0;z-index:3;' bindtap='onStamp'></view>
+                    </view>
+                    <!--明信片填写的内容  -->
+                    <view class='mailContent' style='position:relative;'>
+                        <text style='font-size:24rpx'>{{mailContent}}</text>
+                        <canvas style="width: 100%; height: {{windowHeight * 0.84 * 0.49 * 0.9}}rpx;position:absolute;top:0rpx;right:0rpx;" canvas-id="mailContentCanvas"></canvas>
+                    </view>
+                    <!--底部logo  -->
+                    <view class='logoBox'>
+                        <image wx:if="{{!config_logo}}" class='logo' src='{{config_logo}}' mode='widthFix'></image>
+                    </view>
+                    <!--邮戳  -->
+                    <view class='postmarkBox markDown' style='width:200rpx;height:200rpx;position:absolute;transform:rotate(25deg);top:10rpx;right:55rpx;display:flex;flex-direction:column;justify-content:ccenter;z-index:2;'>
+                        <image src='{{postmark}}' style='width:200rpx;' mode='widthFix'></image>
+                        <text hidden="{{currentConfig.config!='config_korjo'}}" style='text-align:center;font-size:25rpx;margin-top:-125rpx;width:200rpx;'>{{address}}\n{{date}}</text>
+                    </view>
+                </view>
+            </view>
+            <!--正面  -->
+            <view class='gc backgroundContent {{hiddenGC?"slideInRight":"slideOutLeft"}}' hidden='{{!hiddenGC}}' style='width:{{windowHeight*0.84}}rpx;height:705rpx;'>
+                <image src='{{picUrl}}'></image>
+            </view>
+        </view>
+    </view>
+    <!--刚进入时的蒙层  -->
+    <view class='cover fadeIn' hidden='{{hiddenCover}}' bindtap='tapCover'>
+        <canvas style="width: 100%; height: calc(100% + {{bar.titleHeight}}px);position:fixed;top:0;left:0;bottom:0;right:0;" canvas-id="coverCanvas"></canvas>
+    </view>
+    <!--点击分享按钮时显示的蒙层  -->
+    <view class='shareCover fadeIn' hidden='{{hiddenShareCover}}' bindtap='tapShareCover'>
+        <canvas style="width: 100%; height: 100%;position:fixed;top:0;left:0;bottom:0;right:0;" canvas-id="sharecoverCanvas"></canvas>
+    </view>
+</view>

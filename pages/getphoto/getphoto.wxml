@@ -1,0 +1,37 @@
+<import src='../../private/shared/bar/bar.wxml' />
+<view class="page {{bg}}">
+    <template is="bar" data="{{...bar}}"/>
+	<swiper bindchange="changeSwiper" current="{{current}}" style="height: {{swiperH}}px; padding-top: {{bar.titleHeight}}px;">
+		<block>
+            <swiper-item style="height: auto;">
+                <image class="title" src="{{img}}title.png" mode="widthFix"></image>
+                <view class="pic-wrapper">
+                    <image class="pic" src="{{img}}swiper.png" mode="widthFix"></image>
+                    <view class="pic-bg"></view>
+                </view>
+                <view class="arrow right" bindtap="goNext">
+                    <image class="icon" src="../../images/pre.png"></image>
+                </view>
+            </swiper-item>
+        </block>
+        <block>
+            <swiper-item style="height: auto;">
+                <view class="pic-wrapper">
+                    <image class="pic" src="../../images/swiper02.png" mode="widthFix"></image>
+                    <view class="pic-bg"></view>
+                    <image class="magnify" src="{{img}}magnify.png" mode="widthFix"></image>
+                </view>
+                <view class="btn-wrapper">
+                    <button plain="true" bindtap="goPhoto" bindgetuserinfo="getUser" open-type="{{getUserInfo}}">
+                        <image class="btn" src="../../images/btn.png" mode="widthFix"></image>
+                    </button>
+                    <view class="btn-bg">
+                    </view>
+                </view>
+                <view class="arrow left" bindtap="goNext">
+                    <image class="icon" src="../../images/pre.png"></image>
+                </view>
+            </swiper-item>
+        </block>
+	</swiper> 
+</view>

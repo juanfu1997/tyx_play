@@ -1,0 +1,156 @@
+@import "../../../private/shared/common/common.wxss";
+
+.page{
+    background: #000000 center center /cover url("https://www.korjo.cn/xcx/thisLoveLetter/loveLetterBg.jpg") fixed no-repeat;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-around;*/
+    align-items: center;
+}
+.letterFrame{
+    width: 80%;
+    height: 74%;
+    padding: 80rpx 0rpx 100rpx 0;
+    background: url('https://www.korjo.cn/xcx/thisLoveLetter/letterPage.png');
+    background-size: 100% 100%;
+    margin:40rpx auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.letterLogo{
+    width: 90%;
+}
+.letterLogo image{
+    width: 100%;
+}
+.letterInfo{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.letterReceive{
+    display: flex;
+    align-items: center;
+}
+.letterReceive image{
+    width: 50rpx;
+}
+.letterReceive input{
+    width: 150rpx;
+    height: 50rpx;
+    border-bottom: 2rpx solid #e85c83;
+    margin-left: 10rpx;
+    color: #a40550;
+}
+.letterInput{
+    width: 100%;
+    height: 100rpx;
+    margin: 40rpx 0;
+    flex-grow: 1;
+}
+.letterInput textarea{
+    width: 100%;
+    height: 100%;
+    border: 2rpx solid #e85c83;
+    padding: 20rpx 10rpx;
+    font-size: 36rpx;
+    line-height: 1;
+    color: #a40550;
+    box-sizing: border-box;
+}
+.letterSend{
+    display: flex;
+    justify-content: flex-end;
+}
+.letterSend input{
+    width: 150rpx;
+    height: 50rpx;
+    border-bottom: 2rpx solid #e85c83;
+    text-align: right;
+    color: #a40550;
+}
+.input_text_receive{
+    color:#f7c0cc;
+    font-size: 26rpx;
+    padding-left: 10rpx;
+}
+.input_text_input{
+    color: #f7c0cc;
+    font-size: 20rpx;
+    line-height: 1;
+    padding: 0rpx 0;
+}
+.input_text_send{
+    color: #f7c0cc;
+    font-size: 26rpx;
+    text-align: right;
+    transform: translateX(-13rpx);
+}
+.makeQRcode{
+    background-color: rgba(0,0,0,0);
+    color: #ffffff;
+    border:4rpx solid #ffffff;
+    border-radius: 40rpx;
+    font-size: 36rpx;
+    padding-left: 60rpx;
+    padding-right: 60rpx;
+}
+.demo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mongolia{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.loading{
+    width: 64%;
+    position: relative;
+    transform: translateY(-5%);
+}
+.loading_image{
+    width: 100%;
+}
+.choiceTea{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-42%);
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.choiceTea_image{
+    width: 50%;
+    height: auto;
+}
+.drinkTheTea{
+    color: #ffffff;
+    padding: 0 30rpx;
+    font-size: 30rpx;
+    border:4rpx solid #ffffff;
+    border-radius: 29rpx;
+    line-height: 58rpx;
+    box-sizing: border-box;
+    height: 58rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

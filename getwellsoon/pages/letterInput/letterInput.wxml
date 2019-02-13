@@ -1,0 +1,39 @@
+<import src='../../private/shared/bar/bar.wxml' />
+<view class="page">
+    <template is="bar" data="{{...bar}}"/>
+    <view class="letterFrame" style="margin-top: {{bar.titleHeight+10}}px;">
+        <view class="letterLogo">
+            <image src="{{img}}teaLogo.png" mode="widthFix"></image>
+        </view>
+        <view class="letterInfo">
+            <view class="letterReceive">
+                <image src="{{img}}to.png" mode="widthFix"></image>
+                <input  type="text" name="" placeholder="TA的名字" placeholder-class="input_text_receive" bindblur="saveReceive" />
+            </view>
+            <view class="letterInput">
+                <textarea  type="text" name="" placeholder="点击填写你想传达的情和意吧!60字以内哦!" placeholder-class="input_text_input" maxlength="60" bindblur="saveContent" />
+            </view>
+            <view class="letterSend">
+                <!-- <image src="{{img}}to.png" mode="widthFix"></image> -->
+                <input  type="text" name="" placeholder="你的名字" placeholder-class="input_text_send" bindblur="saveSend" />
+            </view>
+        </view>
+        <image class="bow" src="{{img}}bow.png" mode="widthFix" />
+    </view>
+    <view class="QRcode">
+        <button class="makeQRcode" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo"></button>
+            <image class="makeQRcodeImg" src="{{img}}makeQRcode.png" mode="widthFix" />
+    </view>
+    <image class="letter_flower" src="{{img}}letter_flower.png" mode="widthFix" />
+
+    <cover-view class="demo" hidden="{{showTeaStore}}" >
+        <cover-view class="mongolia" bindtap="hideMongolia"></cover-view>
+        <cover-view class="loading">
+            <cover-image class="loading_image" src="{{img}}loading.png" mode="widthFix"></cover-image>
+            <cover-view class="choiceTea">
+                <cover-image class="choiceTea_image" src="{{img}}tips.png" mode="widthFix"></cover-image>
+                <cover-view class="drinkTheTea" bindtap="teaStore">去选一杯茶</cover-view>
+            </cover-view>
+        </cover-view>
+    </cover-view>
+</view>

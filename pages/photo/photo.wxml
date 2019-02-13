@@ -1,0 +1,40 @@
+<import src='../../private/shared/bar/bar.wxml' />
+<view class="page">
+    <template is="bar" data="{{...bar}}"/>
+    <view class="title-wrapper" style="padding-top: {{bar.titleHeight}}px;">
+        <image class="titlePic" src="{{img}}title.png" mode="widthFix"></image>
+    </view>
+    <view class="frame">
+        <image class="frame-bg" src="../../images/frame.png" mode="widthFix"></image>
+        <view class="container">
+            <image class="frame-pic" src="../../images/frame.png" mode="widthFix"></image>
+            <view class="photo" style="background-image: url({{photo}});"></view>
+            <view class="upload-btn" bindtap="upLoadImg">
+                <image class="upload-icon" hidden="{{isUploadHidden}}" src="{{img}}i-upload.png" mode="widthFix"></image>
+            </view>
+            <image class="dec1" src="{{img}}dec1.png" mode="widthFix"></image>
+            <image class="dec2" src="{{img}}dec2.png" mode="widthFix"></image>
+            <image class="dec3" src="{{img}}dec3.png" mode="widthFix"></image>
+            <view class="dec-wrapper">
+                <view class="dec4-wrapper clearfix">
+                    <image class="dec4" src="{{img}}dec4.png" mode="widthFix"></image>
+                </view>
+                <view class="dec5-wrapper clearfix">
+                    <image class="dec6" src="{{img}}dec6.png" mode="widthFix"></image>
+                    <image class="dec5" src="{{img}}dec5.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="btn-wrapper">
+        <image bindtap="submitData" class="btn" src="{{img}}btn_create.png" mode="widthFix"></image>
+        <view class="btn-bg">
+        </view>
+    </view>
+</view>
+<view class="lightbox" hidden="{{isHintHidden}}">
+    <view class="hint-wrapper">
+        <image class="waiting" src="{{img}}waiting.png" mode="widthFix"></image>
+        <image class="btn" bindtap="goHome" src="{{img}}more_game.png" mode="widthFix"></image>
+    </view>
+</view>

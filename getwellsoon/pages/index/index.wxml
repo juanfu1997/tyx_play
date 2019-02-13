@@ -1,0 +1,13 @@
+<import src='../../private/shared/bar/bar.wxml' />
+<view class="page {{bg}}">
+    <template is="bar" data="{{...bar}}"/>
+    <view class="adnimaiton" style="margin-top: {{bar.titleHeight}}px;">
+        <view class="adnimaiton_list">
+            <image animation="{{teaAnimation}}" class="tea" src="{{img}}tea.png" mode="widthFix"/>
+            <image animation="{{vaseAnimation}}" class="vase" src="{{img}}vase.png" mode="widthFix" />
+            <image animation="{{falling_flower}}" class="falling_flower" src="{{img}}falling_flower.png" mode="widthFix" />
+        </view>
+    </view>
+    <image wx:if="{{letterImg}}" class="care" src="{{img}}{{letterImg}}.png" mode="widthFix" data-page="{{pageParams}}" bindtap="nextPage" />
+    <view ></view>
+</view>

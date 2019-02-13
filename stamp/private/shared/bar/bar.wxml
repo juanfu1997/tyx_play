@@ -1,0 +1,6 @@
+<template name="bar">
+	<view class="bar" style="height: {{titleHeight}}px;">
+        <image wx:if="{{!hideArrow}}" class='arrow-left' catchtap="goBackPage" src="../../images/pre.png" mode="widthFix"></image>
+        <view class="title">{{title}}</view>
+    </view>
+</template>

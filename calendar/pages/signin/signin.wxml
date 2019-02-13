@@ -1,0 +1,44 @@
+<import src='../../../private/shared/bar/bar.wxml' />
+<view class="page">
+	<template is="bar" data="{{...bar}}"/>
+	<view class="sign_info" style="margin-top: {{bar.titleHeight}}px;">
+		<image class="title" src="{{img}}title_signin.png" mode="widthFix"></image>
+		<text class="level">签到等级：一级</text>
+		<view class="mark_days">
+			<view class="mark_info">
+				<text class="big">{{registeredDays}}</text><text>天</text><text class="highlight">\n已连续签到</text>
+			</view>
+		</view>
+		<text class="h3>">点击下方进行签到</text>
+		<view class="show_days">
+			<view class="line"></view>
+			<view class="days">
+				<view class="day" wx:for="{{markedDays}}" wx:key="{{index}}" catchtap="signIn" data-index="{{index}}">
+					<view class="circle">
+						<image class="icon {{index < registeredDays ? 'smile' : ''}}" src="{{img}}{{index < registeredDays ? 'smile' : 'check'}}.png" mode="widthFix"></image>
+						<view class="num">{{index < registeredDays ? '已签': '未签'}}</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="container">
+		<image class="bg" src="{{img}}bg_signin.jpg" mode="widthFix"></image>
+		<view class="wrapper">
+			<view class="h1">签到规则说明</view>
+			<view class="rule">
+				<text>1.每日签到一次，连续7日即会获得优惠券一张；连续签到一个月即可获得免费赠饮，好券多多，坚持签到呦！\n2.中途若中断签到，则累计天数清零，从第一天开始重新计算天数；已获得的优惠券不予收回；\n3.连续签到可获得不同等级，等级越高所获得的券越优惠。若中断签到则会降一级；\n4.签到活动最终解释权归亭驿下所有。</text>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="lightbox resultbox" hidden="{{isPrizeHidden}}">
+	<view class="prize">
+		<image class="medal" src="{{img}}medal.png" mode="widthFix"></image>
+		<view class="desc" catchtap="goDraw">
+			<image class="stars" src="{{img}}star.png" mode="widthFix"></image>
+			<view class="text"><text>您已完成连续7日签到任务，\n获得<text class="highlight">第二杯半价</text>优惠券一张，\n已存入您的券包，\n记得及时使用哦！</text></view>
+		</view>
+	</view>
+	<image class="close" src="{{img}}close.png" mode="widthFix" catchtap="goPrizes"></image>
+</view>

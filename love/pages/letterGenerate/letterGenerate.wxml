@@ -1,0 +1,28 @@
+<import src='../../private/shared/bar/bar.wxml' />
+<view class="page">
+    <template is="bar" data="{{...bar}}"/>
+    <view class="letterFrame" style="margin-top: {{bar.titleHeight}}px;" bindtap="saveLetterImg">
+        <view class="letterLogo">
+            <image src="{{img}}letterLogo.png" mode="widthFix"></image>
+        </view>
+        <view class="letterInfo">
+            <view class="letterReceive">
+                <image src="{{img}}to.png" mode="widthFix"></image>
+                <input disabled="true" type="text" name="" value="{{contentJSON.receiver}}" placeholder="TA的名字" placeholder-class="input_text_receive" />
+            </view>
+            <view class="letterInput">
+                <view class="letterInput_text" wx:for="{{letterText}}">{{item.text}}</view>
+            </view>
+            <view class="letterSend">
+                <!-- <image src="{{img}}to.png" mode="widthFix"></image> -->
+                <input disabled="true" type="text" name="" value="{{contentJSON.sender}}" placeholder="你的名字" placeholder-class="input_text_send" />
+            </view>
+        </view>
+    </view>
+    <view class="tips"  bindlongpress="saveLetterImg">
+        <view>点击保存图片</view>
+    </view>
+    <view class="more" data-page="index" data-open-type="reLaunch" bindtap="BackIndexPage">
+        <image style="width: 100%;" src="{{img}}tyxMore.png" mode="widthFix"></image>
+    </view>
+</view>

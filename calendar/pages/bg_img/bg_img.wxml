@@ -1,0 +1,18 @@
+<import src='../../../private/shared/bar/bar.wxml' />
+<view class="page">
+    <template is="bar" data="{{...bar}}"/>
+    <view class="list" style="margin-top: {{bar.titleHeight}}px;">
+        <view class="wrapper">
+            <view class="li" bindtap="goImg">
+                <view class="subtitle">选择背景图</view>
+                <view class="arrow-right"><text></text></view>
+            </view>
+        </view>
+        <view class="wrapper">
+            <view class="li" catchtap="">
+                <view class="subtitle">从手机相册选择</view>
+                <view class="arrow-right"><text></text></view>
+            </view>
+        </view>
+    </view>
+</view>

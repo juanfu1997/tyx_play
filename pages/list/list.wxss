@@ -1,0 +1,57 @@
+@import "../../private/shared/common/common.wxss";
+.page {
+	background: #000000 center center /cover url("https://www.korjo.cn/xcx/tyx_playImg/bg_li.jpg") fixed no-repeat;
+}
+
+.container {
+	padding-top: 30rpx;
+}
+
+.btn-wrapper {
+	position: relative;
+	margin: 0 auto 25rpx;
+	width: 70%;
+}
+
+.btn-wrapper.last-abled {
+	margin-bottom: 30rpx;
+}
+
+.btn-wrapper.disabled {
+	width: 68%;
+	margin-bottom: 35rpx;
+}
+
+.btn-wrapper button {
+	border: none;
+	padding: 0;
+}
+
+.btn-wrapper .btn {
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+.btn-wrapper .btn-bg {
+	z-index: 1;
+	position: absolute;
+	top: 6rpx;
+	bottom: 6rpx;
+	left: 1%;
+	right: 1%;
+	background-color: rgba(0,0,0, .8);
+}
+
+.soon {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 150%);
+	width: 60%;
+	transition: all .8s;
+}
+
+.soon.show {
+	transform: translate(-50%, -100%);
+}

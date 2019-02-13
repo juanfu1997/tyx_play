@@ -1,0 +1,30 @@
+<import src='../../private/shared/bar/bar.wxml' />
+<!--pages/sample/sample.wxml-->
+<view class="page">
+     <view class='container' style="margin-top: {{bar.titleHeight}}px;" >
+            <picker mode="selector" range="{{config}}" range-key="config_title" value="{{configIndex}}" bindchange="getPickerValue">
+                <view class='location'>
+                    <!-- <image class='{{tapOdd?"rotate180":"rotate0"}}' src='{{img}}placemark.png' mode='widthFix' bindtap='locate'></image> -->
+                    <text style="{{config[configIndex].fontStyle}}">{{area}}</text>
+                    <image class="arrow" src="https://www.korjo.cn/xcx/poststamp/arrow.png" mode="widthFix" />
+                </view>
+            </picker>
+            <view class='postBgBox'>
+                <image class='fadeIn' src='{{picUrl}}'></image>
+            </view>
+            <view class='postContentBox' style='position:relative'>
+                <image src='{{letterPaper}}'></image>
+                <!-- <canvas style="width: 180rpx;height: 180rpx;margin-left:25rpx;position:absolute;top:80rpx;left:8rpx;" canvas-id="roundPicCanvas"></canvas> -->
+                <view class='fadeIn' style="width: 180rpx; height: 180rpx;position:absolute;top:80rpx;left:10rpx;">
+                    <image src='{{picFrameUrl}}' style='width: 180rpx; height: 180rpx;'></image>
+                    <view style="width: 140rpx; height: 140rpx;border-radius:50%;overflow:hidden;margin-top:-180rpx;margin-left:35rpx;">
+                        <image src='{{config[configIndex].letterImg||picUrl}}' style='width:270rpx;height:180rpx;margin-left:-50rpx;margin-top:-20rpx;'></image>
+                    </view>
+                </view>
+                <!-- <image src='{{picFrameUrl}}' style='width: 180rpx;height: 180rpx;position:absolute;top:80rpx;left:8rpx;'></image> -->
+                <image class='fadeIn' src='{{stampUrl}}' style="width: 80rpx;height: 80rpx;position: absolute;top:10rpx;right:15rpx;"></image>
+            </view>
+            <button class='startBtn' bindtap='bindFillBtn' hover-class='startBtnHover'>填写明信片</button>
+        </view>
+    </view>
+    <template is="bar" data="{{...bar}}"/>

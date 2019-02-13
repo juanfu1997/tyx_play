@@ -1,0 +1,48 @@
+<import src='../../../private/shared/bar/bar.wxml' />
+<view class="page">
+    <template is="bar" data="{{...bar}}"/>
+    <view class="header">
+        <image class="bg" src="{{img}}bg-banner.jpg" mode="widthFix" style="padding-top: {{bar.titleHeight}}px;"></image>
+        <!-- 用户信息 -->
+        <view class='hd'>
+            <image class="card" src="{{img}}card.png" mode="widthFix"></image>
+            <view class="user-info">
+            	<image class="avatar" src="https://wx.qlogo.cn/mmopen/vi_32/LsRORibray06icmQ1TiaojrjcibA8Qank79h24A2DWibicD4hSK5Oq8sicdyRm6n0mmy7wQrTTl6VXHib1anic8lf6XYFNg/132" mode="aspectFill"></image>
+            	<text>苦哈哈小姐<text class="vip">\nVIP月历会员</text><text class="expiration">\n将于2019-01-30到期</text></text>
+            </view>
+        </view>
+    </view>
+    <view class="list">
+        <view class="wrapper">
+            <view class="li" bindtap="goImg">
+                <view class="subtitle">购买优惠券月历</view>
+                <view class="arrow-right"><text></text></view>
+            </view>
+        </view>
+        <view class="wrapper">
+            <view class="li" catchtap="">
+                <view class="subtitle">我的券包</view>
+                <view class="arrow-right"><text></text></view>
+            </view>
+        </view>
+        <view class="wrapper">
+            <view class="li" catchtap="">
+                <view class="subtitle">我的事件</view>
+                <view class="arrow-right"><text></text></view>
+            </view>
+        </view>
+        <view class="wrapper">
+            <view class="li" catchtap="">
+                <view class="subtitle">设置万年历背景</view>
+                <view class="arrow-right"><text></text></view>
+            </view>
+        </view>
+        <view class="wrapper">
+            <view class="li" catchtap="">
+                <view class="subtitle">签到等级</view>
+                <view class="arrow-right">一级</view>
+            </view>
+        </view>
+    </view>
+    <view class="long-btn">退出当前帐号</view>  
+</view>

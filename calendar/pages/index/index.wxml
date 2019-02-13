@@ -1,0 +1,23 @@
+<import src='../../../private/shared/bar/bar.wxml' />
+<view class="page">
+    <template is="bar" data="{{...bar}}"/>
+    <view class="container" style="margin-top: {{bar.titleHeight}}px;">
+        <view class="section">
+            <view class="moon">
+                <view class="part"><text class="big">{{dateObj.day}}</text>日</view>
+                <view class="part">
+                    <text class="second">{{dateObj.month}}月.星期{{dateObj.weekDay}}\n</text>
+                    <text space="nbsp">{{dateObj.nongli}} 射手座\n{{dateObj.suici}}【属{{dateObj.zodiac}}】</text>
+                </view>
+            </view>
+            <view class="quote">这里的人说：“人生成功的秘诀是当好机会来临时，立刻抓住它。“</view>
+        </view>
+        <view class="footer-buttons">
+            <view class="button-bg big" bindtap="goWeek">
+                <view class="button">
+                    <text>万年历</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

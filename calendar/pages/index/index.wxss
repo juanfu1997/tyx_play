@@ -1,0 +1,110 @@
+@import "../../../private/shared/common/common.wxss";
+.page {
+	background: center center /cover url("https://www.korjo.cn/xcx/tyx_playImg/calendar/bg1.jpg") fixed no-repeat;
+}
+
+.container {
+	
+}
+
+/***农历加名言***/
+.container .section {
+    color: #fff;
+    width: 82%;
+    margin: 0 auto;
+    padding-top: 100rpx;
+}
+
+.container .section .moon {
+    font-size: 25rpx;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 15rpx;
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.container .section .moon .part:first-of-type {
+    font-size: 30rpx;
+    line-height: 1;
+}
+
+.container .section .moon .part:nth-of-type(2) {
+    padding-bottom: 5rpx;
+}
+
+.container .section .moon .part .big {
+    font-size: 150rpx;
+}
+
+.container .section .moon .part .second {
+    font-size: 40rpx;
+    font-weight: bold;
+}
+
+.container .section .quote {
+    font-size: 30rpx;
+    padding-top: 10rpx;
+    line-height: 1.5;
+}
+
+
+/***footer按钮, 与week页面共用***/
+
+.footer-buttons {
+    color: #000000;
+    position: fixed;
+    bottom: 40rpx;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+.footer-buttons .button-bg {
+    border-radius: 50%;
+    background-color: rgba(234,188,39,.4);
+}
+
+.footer-buttons .button-bg.big {
+    background-color: rgba(11,11,11,.4);
+    font-size: 29rpx;
+    line-height: 1.2;
+    height: 132rpx;
+    width: 132rpx;
+    padding: 12rpx;
+    margin: 0 20rpx;
+}
+
+.footer-buttons .button-bg.small {
+    font-size: 25rpx;
+    line-height: 1.2;
+    height: 110rpx;
+    width: 110rpx;
+    padding: 10rpx;
+}
+
+.footer-buttons .button-bg .button {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    background-color: #eabc27;
+}
+
+.footer-buttons .button-bg.big .button {
+    background-color: #0b0b0b;
+    color: #eabc27;
+}

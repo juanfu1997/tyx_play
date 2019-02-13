@@ -1,0 +1,45 @@
+<import src='../../private/shared/bar/bar.wxml' />
+<view class="page" bindlongpress="downloadPhoto">
+    <template is="bar" data="{{...bar}}"/>
+	<view class="title-wrapper" style="padding-top: {{bar.titleHeight}}px;">
+        <image class="titlePic" src="{{img}}title.png" mode="widthFix"></image>
+    </view>
+    <view class="frame">
+        <image class="frame-bg" src="../../images/frame.png" mode="widthFix"></image>
+        <view class="container">
+            <image class="frame-pic" src="../../images/frame.png" mode="widthFix"></image>
+            <view class="photo" style="background-image: url({{info.photo}});"></view>
+            <image class="dec1" src="{{img}}dec1.png" mode="widthFix"></image>
+            <image class="dec2" src="{{img}}dec2.png" mode="widthFix"></image>
+            <image class="dec3" src="{{img}}dec3.png" mode="widthFix"></image>
+            <view class="dec-wrapper">
+                <view class="dec4-wrapper clearfix">
+                    <image class="dec4" src="{{img}}dec4.png" mode="widthFix"></image>
+                </view>
+                <view class="dec5-wrapper clearfix">
+                    <image class="dec6" src="{{img}}dec6.png" mode="widthFix"></image>
+                    <image class="dec5" src="{{img}}dec5.png" mode="widthFix"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="downloader">长按保存图片</view>
+    <view class="footer-wrapper">
+        <image class="caption" src="{{img}}caption.png" mode="widthFix"></image>
+        <view class="arrow-wrapper" bindtap="goHome">
+            <image class="arrow" src="{{img}}i-arrow.png" mode="widthFix"></image>
+            <text class="inter">进入</text>
+        </view>
+    </view>
+</view>
+<view class="lightbox" hidden="{{!isModalShow}}">
+    <view class="alertbox">
+        <image class="pic" src="../../images/alarm.svg"></image>
+        <view class="h2">设置权限</view>
+        <view class="p"><text>设置保存图片到相册权限</text></view>
+        <view class="btns">
+            <view class="btn" bindtap="reject">取消</view>
+            <button class='btn important' plain="true" bindopensetting="getSetting" open-type="openSetting">确定</button>
+        </view>
+    </view>
+</view>

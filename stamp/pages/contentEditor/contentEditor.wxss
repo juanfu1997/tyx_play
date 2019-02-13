@@ -1,0 +1,74 @@
+@import '../../private/shared/bar/bar.wxss';
+/*@import "../../../private/shared/common/common.wxss";*/
+/* pages/contentEditor/contentEditor.wxss */
+page{
+    width: 100%;
+    height:100%;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    background-color: rgba(239, 233, 222,0.3);
+    background: #000000 center center /cover url("https://www.korjo.cn/xcx/poststamp/contentEditorBg.jpg") fixed no-repeat;
+}
+.logo_frame{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#postcard_logo{
+    width: 200rpx;
+    /*margin: 0 auto;*/
+    margin-top: 15rpx;
+    /*display: block;*/
+}
+#bgshadow{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: none;
+    z-index: -1;
+}
+
+.contentBox{
+    margin-top: 15rpx;
+    width: 100%;
+    height: 500rpx;
+}
+
+.content{
+    width: 683rpx;
+    height: 100%;
+    line-height: 81rpx;
+    padding-left: 34rpx;
+    padding-right: 34rpx;
+    font-size: 30rpx;
+}
+
+.grayFont{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.defaultFont{
+    color: black;
+}
+
+.saveBtn{
+    width: 400rpx;
+    height: 80rpx;
+    line-height: 72rpx;
+    color: #54423e;
+    background-color: transparent;
+    margin-top: 50rpx;
+    border: 4rpx dashed #54423e;
+    border-radius: 35rpx;
+}
+.saveBtn::after{
+    border: none;
+}
+.saveBtnHover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+

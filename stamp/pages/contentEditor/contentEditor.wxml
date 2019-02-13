@@ -1,0 +1,13 @@
+<!--pages/contentEditor/contentEditor.wxml-->
+<import src='../../private/shared/bar/bar.wxml' />
+<view class='container'>
+    <template is="bar" data="{{...bar}}"/>
+    <view class="logo_frame">
+        <image id='postcard_logo' src='{{img}}postcard_logo.png' mode='widthFix' style="margin-top: {{bar.titleHeight}}px;"></image>
+    </view>
+    <view class='contentBox'>
+        <textarea class='content' style='color:{{isNewInput?"rgb(147, 147, 147)":"black"}}' value='{{content}}' maxlength='80' bindblur='blurContent' bindfocus='focusContent' bindinput='inputContent'></textarea>
+        <canvas style="width: 750rpx; height: 500rpx;margin-top:-500rpx;" canvas-id="canvas_content"></canvas>
+    </view>
+    <button class='saveBtn' bindtap='saveContent' hover-class='saveBtnHover'>保存明信片</button>
+</view>

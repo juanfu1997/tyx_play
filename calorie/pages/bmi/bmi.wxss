@@ -1,0 +1,180 @@
+@import "../../../private/shared/common/common.wxss";
+.page {
+	background: #fff9ef center center /cover url("https://www.korjo.cn/xcx/tyx_playImg/bg_bmi.jpg") fixed no-repeat;
+}
+
+.bar {
+	color: #000;
+}
+
+.container {
+	padding-top: 30rpx;
+}
+
+.container .title {
+	width: 68%;
+	margin: 0 auto;
+}
+
+.container .subtitle-wrapper {
+	color: #e63a36;
+	font-size: 37rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 15rpx;
+}
+
+.container .subtitle-wrapper .circle {
+	background-color: #e63a36;
+	height: 23rpx;
+	width: 23rpx;
+	border-radius: 50%;
+}
+
+.container .subtitle-wrapper text {
+	padding: 0 10rpx;
+}
+
+.container .intro {
+	width: 93%;
+	margin: 15rpx auto 0;
+}
+
+.container .intro.left {
+	animation-name: zoomOutLeft;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.container .result {
+	color: #fff;
+	position: relative;
+}
+
+.container .result.show {
+	-webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-name: flipInY;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.container .result .data {
+	font-size: 35rpx;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 120rpx;
+}
+
+.container .result .data .li:first-of-type {
+	margin-bottom: 20rpx;
+}
+
+.container form {
+	color: #fff;
+	position: relative;
+	width: 93%;
+	margin: 0 auto;
+	font-size: 30rpx;
+	padding: 80rpx 50rpx 0;
+}
+
+.container form .form-bg {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.container form .li {
+	position: relative;
+	z-index: 3;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40rpx;
+	line-height: 2.5;
+}
+
+.container form .li .input-wrapper {
+	position: relative;
+	flex: 1;
+	margin-right: 15rpx;
+}
+
+.container form .li .input-wrapper image {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.container form .li .input-wrapper input {
+	position: relative;
+	z-index: 3;
+	text-align: center;
+	padding: 0 28rpx;
+	color: #000;
+	line-height: 2.3;
+}
+
+.container form button {
+	border: none;
+	width: 62%;
+	margin-top: 50rpx;
+}
+
+.container form button image {
+	width: 100%;
+}
+
+.container .calorie-btn {
+	width: 55%;
+	margin: 120rpx auto 0;
+}
+
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+
+@keyframes zoomOutLeft {
+  40% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(42px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(.1) translate3d(-2000px, 0, 0);
+    height: 0;
+    transform-origin: left center;
+  }
+}

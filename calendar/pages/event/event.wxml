@@ -1,0 +1,50 @@
+<import src='../../../private/shared/bar/bar.wxml' />
+<view class="page">
+	<template is="bar" data="{{...bar}}"/>
+	<view class="list" style="margin-top: {{bar.titleHeight}}px;">
+		<view class="title-wrapper">
+			<image class="icon" src="{{img}}/i-title.png" mode="widthFix"></image>
+			<text>事件内容：</text>
+		</view>
+		<view class="inputContainer">
+			<input placeholder="请填写事件内容，建议10字以内" name="activity" value="{{eventValue}}" bindinput="eventInput" maxlength="12" placeholder-style="font-size: 30rpx; color: #9c9c9c;" focus="true" />
+		</view>
+	</view>
+	<view class="list">
+		<view class="title-wrapper">
+			<image class="icon" src="{{img}}/i-date.png" mode="widthFix"></image>
+			<text>事件日期：</text>
+		</view>
+		<picker bindchange="chooseBeDate" mode="date" value="{{beDate}}" start="{{beStart}}" end="{{beEnd}}">
+           <view class="picker">
+               {{beDate[0]}}<text space="nbsp" class="unit"> 年 </text>{{beDate[1]}}<text space="nbsp" class="unit"> 月 </text>{{beDate[2]}}<text space="nbsp" class="unit"> 日 </text>
+           </view>
+        </picker> 
+	</view>
+	<view class="list">
+		<view class="title-wrapper">
+			<image class="icon" src="{{img}}/i-clock.png" mode="widthFix"></image>
+			<text>事件时间：</text>
+		</view>
+		<picker class="first" bindchange="chooseAMPM" mode="selector" value="{{ampmIndex}}" range="{{ampm}}">
+           <view class="picker">{{ampm[ampmIndex]}}</view>
+        </picker>
+        <picker class="second" bindchange="chooseTime" mode="time" value="{{time}}" start="{{timeArray[ampmIndex].timeStart}}" end="{{timeArray[ampmIndex].timeEnd}}">
+           <view class="picker">{{time}}</view>
+        </picker>  
+	</view>
+    <view class='list alarm'>
+    	<view class="title-wrapper">
+			<image class="icon" src="{{img}}/i-alarm.png" mode="widthFix"></image>
+			<text>开启事件提醒通知</text>
+		</view>
+        <view class="switch {{switchStatus}}" bindtap="turnOnMessage">
+            <view class="handle"></view>
+        </view>
+        <!-- <view class="more">注：微信推送提醒7日内事件</view> -->
+    </view> 
+    <form class="event-footer clearfix" bindsubmit="send" report-submit="true">
+    	<image class="cancel" src="{{img}}/cancel.png" bindtap="goBack" mode="widthFix"></image>
+    	<button class="button" plain="true" formType="submit">确定添加事件</button>
+    </form>      
+</view>

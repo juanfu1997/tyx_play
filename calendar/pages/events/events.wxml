@@ -1,0 +1,26 @@
+<import src='../../../private/shared/bar/bar.wxml' />
+<view class="page">
+    <template is="bar" data="{{...bar}}"/>
+    <view class="actions" style="margin-top: {{bar.titleHeight}}px;">
+        <view class="chosen">
+            <view class="circle active"><text></text></view>
+            <text>全选</text>
+        </view>
+        <view class="delete">删除</view>
+    </view>
+    <view class="list">
+        <view class="li">
+            <view class="chosen">
+                <view class="circle active"><text></text></view>
+                <text>2018年12月24日 下午6:30\n公司聚餐</text>
+            </view>
+            <view class="notify">
+                <view class="h5">通知提醒</view>
+                <view class="switch {{switchStatus}}" bindtap="turnOnMessage">
+                    <view class="handle"></view>
+                </view>
+            </view>
+            <view class="edit">编辑</view>
+        </view>
+    </view>
+</view>

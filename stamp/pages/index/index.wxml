@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<import src='../../private/shared/bar/bar.wxml' />
+<template is="bar" data="{{...bar}}"/>
+<view class="page">
+    <view class="container" style="margin-top: {{bar.titleHeight}}px;">
+        <view class="logoAndSlogan">
+            <image src="{{baseUrl}}logo.png" mode='widthFix'></image>
+            <text>明信片 分享足迹</text>
+        </view>
+        <image id='icon_k' src="{{baseUrl}}icon_K.png" mode='widthFix'></image>
+        <button class='startBtn' bindtap='bindStartBtn' hover-class='startBtnHover'>点击进入</button>
+        <image class='ufo' src="http://www.korjo.cn/xcx/loveImg/ufo.png" mode="widthFix" bindtap="onTapUFO"></image>
+    </view>
+</view>
+
+

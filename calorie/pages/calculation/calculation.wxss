@@ -1,0 +1,165 @@
+@import "../bmi/bmi.wxss";
+
+.page {
+	background-image: url("https://www.korjo.cn/xcx/tyx_playImg/bg_calorie.jpg");
+}
+
+.container .list {
+	padding: 20rpx 30rpx;
+	display: flex;
+	justify-content: space-between;
+}
+
+.container .list .li {
+	position: relative;
+	width: 22.2%;
+}
+
+.container .list .li .btn_bg {
+	width: 100%;
+	float: left;
+}
+
+.container .list .li .btn_content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .list .li .btn_content .icon{
+	width: 70rpx;
+}
+
+.container .list .li:nth-of-type(1) .btn_content .icon {
+	width: 55rpx;
+}
+
+.container .list .li .btn_content text {
+	color: #fff;
+	font-size: 25rpx;
+	margin: 10rpx;
+}
+
+.container .total {
+	margin: 5rpx 30rpx 0;
+	background-color: #fff;
+	border: 1px solid #e63a36;
+	color: #e63a36;
+	padding: 35rpx 30rpx;
+	font-size: 37rpx;
+	border-radius: 25rpx;
+	opacity: 0;
+	transform: scale(.8);
+}
+
+.container .total.fideIn {
+	transition: all .5s;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.container .items-wrapper {
+	margin: 20rpx 30rpx;
+	position: relative;
+}
+
+.container .items-wrapper .items {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 75%;
+	height: 100%;
+	background-color: #fff;
+	border: 1px solid #e63a36;
+	border-radius: 20rpx;
+	overflow: auto;
+	font-size: 24rpx;
+	color: #505050;
+	line-height: 1.5;
+	padding: 25rpx;
+	opacity: 0;
+	transform: scale(.8);
+}
+
+.container .items-wrapper .items.fideIn {
+	transition: all .5s;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.container .items-wrapper .clear {
+	float: right;
+	width: 22%;
+	margin-left: 3%;
+}
+
+.container .calorie-btn {
+	margin-top: 50rpx;
+}
+
+/* ***食物列表弹窗*** */
+.lightbox {
+	overflow: auto;
+	padding-top: 170rpx;
+}
+
+.lightbox .shadow {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.lightbox .listbox {
+	width: 78%;
+	margin: 0 auto 120rpx;
+	background-color: #e63a36;
+	border-radius: 30rpx;
+}
+
+.lightbox .listbox .type {
+	color: #fff;
+	text-align: center;
+	font-size: 35rpx;
+	padding: 25rpx;
+}
+
+.lightbox .listbox .list {
+	background-color: #fff;
+	color: #e63a36;
+	font-size: 28rpx;
+}
+
+.lightbox .listbox .list {
+	padding: 20rpx;
+	padding-top: 0;
+	border-bottom-left-radius: 30rpx;
+	border-bottom-right-radius: 30rpx;
+}
+
+.lightbox .listbox .list .li {
+	border-bottom: 1px solid #c0c0c0;
+	display: flex;
+	align-items: center;
+}
+
+.lightbox .listbox .list .li .itemName {
+	flex: 1;
+}
+
+.lightbox .listbox .list .li .icon {
+	width: 40rpx;
+	margin: 15rpx 0 15rpx 20rpx;
+}
+
+.lightbox .listbox .list .li:last-of-type {
+	border-bottom: none;
+}

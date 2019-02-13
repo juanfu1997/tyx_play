@@ -1,0 +1,82 @@
+<import src='../../../private/shared/bar/bar.wxml' />
+<view class="container">
+    <template is="bar" data="{{...bar}}"/>
+    <view id="calender-wrapper" style="top: {{bar.titleHeight}}px;">
+        <view id="calender-title" class="clearfix">
+            <view id="date"> 
+                <picker bindchange="chooseBeDate" mode="date" value="{{beDate}}" start="{{beStart}}" end="{{beEnd}}">
+                   <view class="picker">
+                       {{beDate[0]}}<text space="nbsp" class="unit"> 年 </text>{{beDate[1]}}<text space="nbsp" class="unit"> 月 </text>{{beDate[2]}}<text space="nbsp" class="unit"> 日 </text>
+                   </view>
+                </picker>              
+            </view>
+            <view class="lunar">
+                <text space="nbsp">{{lunar}}</text>
+            </view>
+            <view class="goToday" bindtap="goToday"><text>返回\n今天</text></view>
+        </view>
+        <view class="allWeek week">
+            <view class="list" wx:for="{{weekList}}" wx:key="{{index}}" bindtap="checkCourses" data-index="{{index}}">{{item.title}}</view>
+        </view>
+        <swiper bindchange="changeSwiper" current="{{swiperCurrent}}">
+            <block wx:for="{{swipers}}" wx:key="idx" wx:for-index="{{idx}}">
+                <swiper-item class="week" style="height: auto;">
+                    <view class="arrow left" hidden="{{isLeftHidden}}" data-dir="left" bindtap="chooseDate"><image src="{{img}}/pre_dark.png" mode="widthFix"></image></view>
+                    <view class="list" wx:for="{{weekList}}" wx:key="{{index}}" bindtap="checkCourses" data-index="{{index}}">
+                        <view class="num {{item.mark}} {{item.num ? 'border' : ''}} {{item.chosen}}">{{item.num}}</view>
+                        <view wx:if="{{item.off}}" class="off">休</view>
+                        <view wx:if="{{item.num && !item.off && (index == 5 || index == 6)}}" class="off">班</view>
+                    </view>
+                    <view class="arrow right" hidden="{{isRightHidden}}" data-dir="right" bindtap="chooseDate"><image src="{{img}}/next_dark.png" mode="widthFix"></image></view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <view class="content-container" style="padding-top: {{bar.titleHeight}}px; background: top {{bar.titleHeight}}px center /cover url({{bgImg}}) no-repeat;">
+        <view class="courses-container">
+            <view class="noData" wx:if="{{allDataForDay.courses.length == 0 ? true : false}}">暂无课程数据</view>
+            <view class="course" wx:for="{{allDataForDay.courses}}" wx:key="index" bindtap="goArticle" data-id="{{item.information_id}}">
+                <view class="item">
+                    <view class="item-title">满22减5元</view>
+                    <view class="tag">小程序内购买任意产品</view>
+                </view>
+                <view class="item course-content">
+                    <view class="note">每笔订单仅限使用一张</view>
+                    <view class="note">仅限【亭驿下茶饮】小程序使用</view>
+                    <view class="note">有效期至：2019-01-30</view>
+                </view>
+                <view class="item">
+                    <text>立即\n领取</text>
+                </view>
+            </view>
+        </view>
+        <view class="events-container">
+            <view class="event" wx:for="{{allDataForDay.holidays}}" wx:key="index">
+                <view class="event-icon" style="background-color: #{{item.namecolor}}">{{item.typename}}</view>
+                <view class="event-title">{{item.holiday}}</view>
+            </view>
+            <view class="event user-event" bindtap="goEvent" data-id="{{item.id}}" wx:for="{{allDataForDay.events}}" wx:key="index">
+                <view class="event-icon">我的事件</view>
+                <view class="event-title">{{item.user_event}} {{item.time}}</view>
+                <image class="edit" src="{{img}}/edit.png" mode="widthFix"></image>
+            </view>
+        </view>    
+    </view>
+    <view class="footer-buttons">
+        <view class="button-bg small" bindtap="">
+            <view class="button">
+                <text>个人\n中心</text>
+            </view>
+        </view>
+        <view class="button-bg big" bindtap="goSignin">
+            <view class="button">
+                <text>签到\n有礼</text>
+            </view>
+        </view>
+        <view class="button-bg small" bindtap="goEvent">
+            <view class="button">
+                <text>添加\n事件</text>
+            </view>
+        </view>
+    </view>
+</view>

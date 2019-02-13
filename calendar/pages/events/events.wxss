@@ -1,0 +1,113 @@
+@import "../../../private/shared/common/common.wxss";
+.page {
+	background-color: #f9f9f9;
+    font-size: 26rpx;
+}
+
+.bar {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 24rpx 20rpx;
+}
+
+.chosen {
+    display: flex;
+    align-items: center;
+}
+
+.chosen .circle {
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 6rpx;
+    margin-right: 12rpx;
+}
+
+.chosen .circle.active {
+    border-color: #f0bb00;
+}
+
+.chosen .circle.active text {
+    background-color: #f0bb00;
+    display: block;
+    width: 24rpx;
+    height: 24rpx;
+    border-radius: 50%;
+}
+
+.actions .delete {
+    border: 1px solid #000;
+    display: inline-block;
+    padding: 8rpx 30rpx;
+    border-radius: 20rpx;
+}
+
+.list {
+    
+}
+
+.list .li {
+    background-color: #fff;
+    margin-bottom: 20rpx;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f4f4f4;
+    border-top: 1px solid #f4f4f4;
+    height: 140rpx;
+    padding-left: 20rpx;
+}
+
+.list .li .chosen {
+    line-height: 1.8;
+    flex: 1;
+}
+
+.list .li .edit {
+    background-color: #f0bb00;
+    height: 100%;
+    line-height: 140rpx;
+    padding: 0 24rpx;
+    margin-left: 30rpx;
+}
+
+.list .li .notify .h5 {
+    font-size: 22rpx;
+    padding-bottom: 12rpx;
+}
+
+.switch {
+    position: relative;
+    border: none;
+    height: 46rpx;
+    width: 90rpx;
+    border-radius: 35rpx;
+    color: #6b7381;
+    background: #bdc1c8;
+}
+
+.switch.on {
+    background-color: #eabc27;
+    transition: background-color 0.25s;
+}
+
+.switch .handle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rpx;
+    width: 42rpx;
+    height: 42rpx;
+    border-radius: 50%;
+    background: #fff;
+    transition: left .25s;
+}
+
+.switch.on .handle {
+    left: 46rpx;
+    transition: left .25s;
+}

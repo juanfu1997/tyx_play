@@ -1,0 +1,10 @@
+<import src='../../../private/shared/bar/bar.wxml' />
+<view class="page">
+    <template is="bar" data="{{...bar}}"/>
+    <view class="list" style="margin-top: {{bar.titleHeight}}px;">
+        <view class="li" wx:for="{{list}}" wx:key="{{index}}">
+            <image class="img" src="../../images/05.jpg" mode="aspectFill"></image>
+            <image class="tick" src="{{img}}tick.png" mode="widthFix"></image>
+        </view>
+    </view>
+</view>

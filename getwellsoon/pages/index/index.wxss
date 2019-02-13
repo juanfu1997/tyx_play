@@ -1,0 +1,44 @@
+/**index.wxss**/
+@import "../../../private/shared/common/common.wxss";
+
+.page{
+}
+.bg1{
+  background: #000000 center center /cover url("https://www.korjo.cn/xcx/tyx_play_getwellsoon/index_bg.jpg") fixed no-repeat;
+}
+.bg2{
+  background: #000000 center center /cover url("https://www.korjo.cn/xcx/tyx_play_getwellsoon/activeLetterBg.jpg") fixed no-repeat;
+}
+.adnimaiton{
+    width: 100%;
+    position: absolute;
+    bottom: 11%;
+    left: 0;
+}
+.adnimaiton_list{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tea,.vase{
+    width: 50%;
+    opacity: 0;
+}
+.falling_flower{
+    position: absolute;
+    width: 57%;
+    bottom: 9%;
+    left:31%;
+    filter: drop-shadow(4rpx 12rpx 4rpx rgba(0,0,0,.13));
+    opacity: 0;
+}
+.care{
+    width: 36%;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}

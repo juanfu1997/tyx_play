@@ -1,0 +1,96 @@
+/*colors
+dark blue: #262260;
+*/
+
+/* ***alert box*** */
+@import "../alert/alert.wxss";
+/* ***顶部导航栏*** */
+@import "../bar/bar.wxss";
+page {
+    height: 100%;
+}
+
+.page,
+input {
+    line-height: 1;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+
+input {
+    min-height: auto;
+}
+
+form {
+    display: block;
+}
+
+image {
+    width: 0;
+    height: 0;
+    display: block;
+}
+
+button {
+    border-radius: 0;
+}
+
+view,
+input,
+checkbox,
+textarea,
+swiper-item,
+form,
+scroll-view {
+    box-sizing: border-box;
+}
+
+/* ***default*** */
+
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+view[hidden] {
+    display: none !important;
+}
+
+.lightbox {
+    overflow: hidden;
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* ***箭头*** */
+.arrow-right {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.arrow-right text {
+    width: 16rpx;
+    height: 16rpx;
+    border-width: 2px 2px 0 0;
+    border-color: #737373;
+    border-style: solid;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: inline-block;
+}

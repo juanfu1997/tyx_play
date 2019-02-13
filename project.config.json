@@ -1,0 +1,202 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"nodeModules": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.1",
+	"appid": "wx859b0b0e82b3d78e",
+	"projectname": "tyx_play",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 20,
+			"list": [
+				{
+					"id": -1,
+					"name": "photo",
+					"pathName": "pages/photo/photo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "hema",
+					"pathName": "pages/hema/hema",
+					"query": "q=123365656"
+				},
+				{
+					"id": -1,
+					"name": "list",
+					"pathName": "pages/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "getphoto",
+					"pathName": "pages/getphoto/getphoto",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "bmi",
+					"pathName": "calorie/pages/bmi/bmi",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "calculation",
+					"pathName": "calorie/pages/calculation/calculation",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "letterGenerate",
+					"pathName": "love/pages/letterGenerate/letterGenerate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "calendarIdx",
+					"pathName": "calendar/pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "week",
+					"pathName": "calendar/pages/week/week",
+					"query": "yy=2019&mm=1&dd=1"
+				},
+				{
+					"id": -1,
+					"name": "bg_img",
+					"pathName": "calendar/pages/bg_img/bg_img",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "img",
+					"pathName": "calendar/pages/img/img",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "myspace",
+					"pathName": "calendar/pages/myspace/myspace",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "signin",
+					"pathName": "calendar/pages/signin/signin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "event",
+					"pathName": "calendar/pages/event/event",
+					"query": "yy=2018&mm=12&dd=24"
+				},
+				{
+					"id": -1,
+					"name": "events",
+					"pathName": "calendar/pages/events/events",
+					"query": ""
+				},
+				{
+					"id": 16,
+					"name": "stamp[index]",
+					"pathName": "stamp/pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "stamp[sample]",
+					"pathName": "stamp/pages/sample/sample",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "stamp[contentEditor]",
+					"pathName": "stamp/pages/contentEditor/contentEditor",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "stamp[show]",
+					"pathName": "stamp/pages/show/show",
+					"query": ""
+				},
+				{
+					"id": 20,
+					"name": "stamp[index]",
+					"pathName": "stamp/pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "getwellsoon[index]",
+					"pathName": "getwellsoon/pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 22,
+					"name": "getwellsoon[letterGenerate]",
+					"pathName": "getwellsoon/pages/letterGenerate/letterGenerate",
+					"query": "q=https%3a%2f%2fwww.korjo.cn%2fletter%3fid%3d102"
+				},
+				{
+					"id": 23,
+					"name": "love[idnex]",
+					"pathName": "love/pages/index/index",
+					"query": "q=https%3a%2f%2fwww.korjo.cn%2fletter%3fid%3d102"
+				},
+				{
+					"id": -1,
+					"name": "love[letterInput]",
+					"pathName": "love/pages/letterInput/letterInput",
+					"query": "q=https%3a%2f%2fwww.korjo.cn%2fletter%3fid%3d102"
+				},
+				{
+					"id": -1,
+					"name": "love[letterGenerate]",
+					"pathName": "love/pages/letterGenerate/letterGenerate",
+					"query": "q=https%3a%2f%2fwww.korjo.cn%2fletter%3fid%3d102"
+				}
+			]
+		}
+	}
+}

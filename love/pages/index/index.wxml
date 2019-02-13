@@ -1,0 +1,30 @@
+<import src='../../private/shared/bar/bar.wxml' />
+<view class="page {{bg}}">
+    <template is="bar" data="{{...bar}}"/>
+    <swiper style="margin-top: {{bar.titleHeight}}px; height: calc(100% - {{bar.titleHeight}}px);" indicator-dots="{{indicatorDots}}" indicator-color="rgba(251, 174, 186, 1)" indicator-active-color="#e85c83" bindchange="changeCurrent" current="{{swiperCurrent}}">
+      <swiper-item class="swiper_Theme" wx:if="{{swiperHidden}}">
+          <image class="letterTitle" src="{{img}}letterTitle.png" mode="widthFix" />
+          <view style="width: 100%;display:flex;flex-direction: column;align-items: center;justify-content: space-between;">
+              <view class="theme_frame">
+                  <image class="balloons" src="{{img}}balloons.png" mode="widthFix" animation="{{balloons}}" />
+                  <image class="theme" src="{{img}}theme.png" mode="widthFix" animation="{{theme}}" />
+              </view>
+              <image class="theCupOfTea" src="{{img}}theCupOfTea.png" mode="widthFix" animation="{{theCupOfTea}}" />
+          </view>
+      </swiper-item>
+      <swiper-item class="swiper_letterBg">
+          <view class="swiper_letter">
+            <view class="letterInfo">
+              <image class="flower" src="{{img}}flower.png" mode="widthFix" />
+              <image class="pen" src="{{img}}pen.png" mode="widthFix" />
+              <image class="whiteLetter" src="{{img}}whiteLetter.png" mode="widthFix" />
+              <image class="letterText" animation="{{animationData}}" src="{{img}}letterText.png" mode="widthFix" />
+          </view>
+          <view>
+              <button class="goLetter" open-type="getUserInfo" data-page="letterInput" bindgetuserinfo="goLetter"  >即刻传情</button>
+          </view>
+
+          </view>
+      </swiper-item>
+    </swiper>
+</view>

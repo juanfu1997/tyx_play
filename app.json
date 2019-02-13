@@ -1,0 +1,68 @@
+{
+  "pages": [
+  	"pages/index/index",
+  	"pages/photo/photo",
+    "pages/hema/hema",
+    "pages/getphoto/getphoto",
+    "pages/list/list"
+  ],
+  "subPackages": [
+    {
+      "root": "calorie/",
+      "pages": [
+        "pages/bmi/bmi",
+        "pages/calculation/calculation"
+      ]
+    },
+    {
+      "root": "love/",
+      "pages": [
+        "pages/index/index",
+        "pages/letterGenerate/letterGenerate",
+        "pages/letterInput/letterInput"
+      ]
+    },
+    {
+      "root": "getwellsoon/",
+      "pages": [
+        "pages/index/index",
+        "pages/letterGenerate/letterGenerate",
+        "pages/letterInput/letterInput"
+      ]
+    },
+    {
+      "root": "calendar/",
+      "pages": [
+        "pages/index/index",
+        "pages/week/week",
+        "pages/img/img",
+        "pages/bg_img/bg_img",
+        "pages/myspace/myspace",
+        "pages/signin/signin",
+        "pages/event/event",
+        "pages/events/events"
+      ]
+    },
+    {
+      "root": "stamp/",
+      "pages": [
+        "pages/index/index",
+        "pages/contentEditor/contentEditor",
+        "pages/sample/sample",
+        "pages/show/show"
+      ]
+    }
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#262260",
+    "navigationBarTitleText": "亭驿下玩玩玩",
+    "navigationBarTextStyle": "white"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx2a5f7da038ec804d",
+    "wxdc153461eca01f8b",
+    "wxc3990715990eb82a"
+  ]
+}

@@ -1,0 +1,36 @@
+@import "../../../private/shared/common/common.wxss";
+.page {
+	background-color: #f9f9f9;
+}
+
+.bar {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.list {
+    padding: 34rpx 24rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list .li {
+    position: relative;
+    margin-bottom: 24rpx;
+}
+
+.list .li .img {
+    width: 218rpx;
+    height: 218rpx;
+    border-radius: 14rpx;
+}
+
+.list .li .tick {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 76rpx;
+}
+
